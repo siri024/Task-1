@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+body {
+  background: #eee;
+  margin: 0 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.nav-btn {
+  background-color: white;
+  width: 100%;
+  margin: 10px 0;
+  padding: 20px 30px;
+  text-align: center;
+  box-shadow: 6px 5px 21px -5px rgba(0, 0, 0, 0.29);
+}
+
+.nav-btn:hover {
+  cursor: pointer;
+}
+
+.about-container {
+  display: flex;
+  width: 100%;
+}
+
+.about-img-container {
+  width: 70%;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 30px;
+  transform: translate(30px, -50%);
+  color: rgb(10, 9, 9);
+}
+
+.overlay h1 {
+  margin-bottom: 20px;
+}
+
+.overlay p {
+  margin-bottom: 20px;
+}
+
+.about-img-container img {
+  width: 100%;
+}
+
+.about-cards {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 20px;
+}
+
+.about-card {
+  height: 100%;
+  background: #fff;
+  margin-left: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-card p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about-card h3 {
+  font-size: 50px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  max-width: 120px;
+  text-align: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.cards {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 20px 0;
+}
+
+.card {
+  width: 100;
+  min-height: 250px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0;
+}
+
+.w3-xxlarge {
+  height: 30px;
+}
+
+.title {
+  font-weight: bold;
+}
+.card p {
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  nav {
+    margin: 20px 0;
+    flex-direction: column;
+  }
+
+  .nav-btn {
+    margin: 0;
+  }
+
+  .about-container {
+    flex-direction: column;
+  }
+
+  .about-img-container {
+    width: 100%;
+  }
+
+  .about-cards {
+    width: 100%;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .about-card {
+    width: 100%;
+    height: 300px;
+    margin-left: 0;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .about-cards {
+    flex-direction: column;
+  }
+
+  .about-card {
+    height: 300px;
+  }
+
+  .cards {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

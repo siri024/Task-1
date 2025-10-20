@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shapes</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      margin-top: 50px;
+    }
+
+    /*  STAR  */
+    
+      #star {
+        position: relative;
+        display: block;
+        color: red;
+        width: 0px;
+        height: 0px;
+        margin: 50px auto;
+        border-right: 100px solid transparent;
+        border-bottom: 70px solid red;
+        border-left: 100px solid transparent;
+        transform: rotate(35deg);
+      }
+      #star:before {
+        border-bottom: 80px solid red;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+        position: absolute;
+        height: 0;
+        width: 0;
+        top: -45px;
+        left: -65px;
+        display: block;
+        content: '';
+        transform: rotate(-35deg);
+      }
+      #star:after {
+        position: absolute;
+        display: block;
+        color: red;
+        top: 3px;
+        left: -105px;
+        width: 0px;
+        height: 0px;
+        border-right: 100px solid transparent;
+        border-bottom: 70px solid red;
+        border-left: 100px solid transparent;
+        transform: rotate(-70deg);
+        content: '';
+      }
+      /*  CIRCLE  */
+      #circle {
+        width: 150px;
+        height: 150px;
+        background-color: green;
+        border-radius: 50%;
+        margin: 40px auto;
+      }
+
+      /*  TRIANGLE  */
+      #triangle {
+        width: 0;
+        height: 0;
+        border-left: 75px solid transparent;
+        border-right: 75px solid transparent;
+        border-bottom: 130px solid orange;
+        margin: 40px auto;
+      }
+
+      /* Optional spacing and labels */
+      h3 {
+        color: #333;
+        padding: 10px;
+      }
+  </style>
+  </head>
+  <body>
+
+  <h3>STAR:</h3>
+  <div id="star"></div>
+
+  <h3>CIRCLE:</h3>
+  <div id="circle"></div>
+
+  <h3>TRIANGLE:</h3>
+  <div id="triangle"></div>
+
+  </body>
+</html>
