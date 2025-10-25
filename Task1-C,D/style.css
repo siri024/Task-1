@@ -22,12 +22,21 @@ nav {
   padding: 20px 30px;
   text-align: center;
   box-shadow: 6px 5px 21px -5px rgba(0, 0, 0, 0.29);
+  text-decoration: none; /* remove underline */
+  color: black; /* text color */
+  font-weight: bold;
+  border-radius: 5px;
+  display: block;
 }
 
 .nav-btn:hover {
   cursor: pointer;
+  background: #000;
+  color: #fff;
+  transition: 0.3s ease;
 }
 
+/* ABOUT SECTION */
 .about-container {
   display: flex;
   width: 100%;
@@ -42,7 +51,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 30px;
-  transform: translate(30px, -50%);
+  transform: translateY(-50%);
   color: rgb(10, 9, 9);
 }
 
@@ -93,6 +102,9 @@ nav {
   color: #fff;
   max-width: 120px;
   text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.3s ease;
 }
 
 .btn:hover {
@@ -100,6 +112,7 @@ nav {
   opacity: 0.8;
 }
 
+/* SERVICES CARDS */
 .cards {
   display: grid;
   gap: 20px;
@@ -108,7 +121,6 @@ nav {
 }
 
 .card {
-  width: 100;
   min-height: 250px;
   background: #fff;
   display: flex;
@@ -118,25 +130,19 @@ nav {
   padding: 30px 0;
 }
 
-.w3-xxlarge {
-  height: 30px;
-}
-
 .title {
   font-weight: bold;
 }
+
 .card p {
   text-align: center;
 }
 
+/* MEDIA QUERIES */
 @media (max-width: 1024px) {
   nav {
     margin: 20px 0;
     flex-direction: column;
-  }
-
-  .nav-btn {
-    margin: 0;
   }
 
   .about-container {
